@@ -128,7 +128,10 @@ function extractWifiField(raw: string, field: string): string | undefined {
 
   for (const seg of segments) {
     const colon = seg.indexOf(":");
-    if (colon !== -1 && seg.slice(0, colon).toUpperCase() === field.toUpperCase()) {
+    if (
+      colon !== -1 &&
+      seg.slice(0, colon).toUpperCase() === field.toUpperCase()
+    ) {
       return seg.slice(colon + 1) || undefined;
     }
   }
@@ -147,5 +150,3 @@ function normalizeSmsUrl(raw: string) {
 
   return `sms:${recipient}${encodedMessage}`;
 }
-
-
