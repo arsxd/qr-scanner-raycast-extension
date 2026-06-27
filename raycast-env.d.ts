@@ -17,6 +17,10 @@ declare namespace Preferences {
   export type ScanDisplay = ExtensionPreferences & {}
   /** Preferences accessible in the `scan-multiple` command */
   export type ScanMultiple = ExtensionPreferences & {}
+  /** Preferences accessible in the `scan-file` command */
+  export type ScanFile = ExtensionPreferences & {}
+  /** Preferences accessible in the `scan-clipboard` command */
+  export type ScanClipboard = ExtensionPreferences & {}
 }
 
 declare namespace Arguments {
@@ -24,5 +28,9 @@ declare namespace Arguments {
   export type ScanDisplay = {}
   /** Arguments passed to the `scan-multiple` command */
   export type ScanMultiple = {}
+  /** Arguments passed to the `scan-file` command */
+  export type ScanFile = {}
+  /** Arguments passed to the `scan-clipboard` command */
+  export type ScanClipboard = {}
 }
 
