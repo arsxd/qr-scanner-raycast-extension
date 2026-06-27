@@ -1,7 +1,7 @@
 {
   "$schema": "https://www.raycast.com/schemas/extension.json",
-  "name": "qr-scanner-v4",
-  "title": "QR Scanner V4",
+  "name": "qr-scanner",
+  "title": "QR Scanner",
   "description": "Scan QR codes from your display and copy their contents to the clipboard.",
   "icon": "command-icon.png",
   "author": "arshaaad",
