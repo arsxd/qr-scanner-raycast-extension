@@ -41,7 +41,11 @@ async function captureWindowsDisplay(outputPath: string) {
     const tmpManifest = path.join(os.tmpdir(), "screenCapture", "app.manifest");
 
     // Copy the bat and manifest from Raycast assets to the temp folder
-    const exists = async (p: string) => access(p).then(() => true, () => false);
+    const exists = async (p: string) =>
+      access(p).then(
+        () => true,
+        () => false,
+      );
     if (!(await exists(tmpBat)) || !(await exists(tmpManifest))) {
       await mkdir(path.join(os.tmpdir(), "screenCapture"), { recursive: true });
 

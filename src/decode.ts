@@ -55,7 +55,10 @@ async function decodeWithVision(path: string): Promise<string[]> {
     return [...new Set(lines)];
   } catch (error) {
     // Fall back to jsQR if Swift execution fails
-    console.error("Vision failed, falling back to jsQR:", error instanceof Error ? error.message : String(error));
+    console.error(
+      "Vision failed, falling back to jsQR:",
+      error instanceof Error ? error.message : String(error),
+    );
     return decodeQrsFromPngWithJsQR(path);
   }
 }
