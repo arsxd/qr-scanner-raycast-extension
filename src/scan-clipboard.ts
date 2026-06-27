@@ -1,9 +1,4 @@
-import {
-  Clipboard,
-  showHUD,
-  showToast,
-  Toast,
-} from "@raycast/api";
+import { Clipboard, showHUD, showToast, Toast } from "@raycast/api";
 import { decodeQrFromPng } from "./decode";
 import { detectContentType } from "./content-type";
 
@@ -15,11 +10,12 @@ export default async function Command() {
 
   try {
     const clipboardData = await Clipboard.read();
-    
+
     if (!clipboardData.file) {
       toast.style = Toast.Style.Failure;
       toast.title = "No image found on clipboard";
-      toast.message = "Please copy an image (e.g., using Snipping Tool or Win+Shift+S) and try again.";
+      toast.message =
+        "Please copy an image (e.g., using Snipping Tool or Win+Shift+S) and try again.";
       return;
     }
 

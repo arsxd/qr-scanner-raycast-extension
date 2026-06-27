@@ -83,7 +83,7 @@ function decodeImage(data: Uint8Array, width: number, height: number) {
     data.byteOffset,
     data.byteLength,
   );
-  
+
   // attemptBoth takes 2x the time, especially when there's no QR code.
   // We use dontInvert to make the scan significantly faster.
   const result = jsQR(clampedData, width, height, {
